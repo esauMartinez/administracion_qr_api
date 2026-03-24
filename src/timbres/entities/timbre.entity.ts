@@ -11,8 +11,11 @@ export class Timbre {
   guia: string;
 
   @Column('text')
-  timbre: string;
+  qr: string;
 
   @Column('text')
   estatus: string;
+
+  @Column('text')
+  qrCCP: string;
 }

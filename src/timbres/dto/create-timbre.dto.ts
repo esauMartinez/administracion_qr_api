@@ -5,8 +5,11 @@ export class CreateTimbreDto {
   guia: string;
 
   @IsString()
-  timbre: string;
+  qr: string;
 
   @IsString()
   estatus: string;
+
+  @IsString()
+  qrCCP: string;
 }

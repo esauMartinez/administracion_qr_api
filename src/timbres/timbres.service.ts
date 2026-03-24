@@ -20,19 +20,13 @@ export class TimbresService {
     return { message: 'Datos guardados', timbre };
   }
 
-  findAll() {
-    return `This action returns all timbres`;
-  }
+  async findAllByTerm(term: string) {
+    const data = await this.timbreRepository.find({
+      where: {
+        guia: term,
+      },
+    });
 
-  findOne(id: number) {
-    return `This action returns a #${id} timbre`;
-  }
-
-  update(id: number, updateTimbreDto: UpdateTimbreDto) {
-    return `This action updates a #${id} timbre`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} timbre`;
+    return data;
   }
 }

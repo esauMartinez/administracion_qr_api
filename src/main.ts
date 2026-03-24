@@ -5,12 +5,12 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.setGlobalPrefix('api-timbres');
+
   app.enableCors({
     origin: process.env.CORS_ORIGIN?.split(',') || '*',
     credentials: process.env.NODE_ENV === 'production',
   });
-
-  app.setGlobalPrefix('api-timbres');
 
   app.useGlobalPipes(
     new ValidationPipe({
