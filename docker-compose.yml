@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: administracion-qr-app
     ports:
-      - '5000:5000'
+      - '3000:3000'
     env_file:
       - .env
     restart: unless-stopped
