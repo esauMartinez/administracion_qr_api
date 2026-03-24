@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateTimbreDto } from './dto/create-timbre.dto';
-import { UpdateTimbreDto } from './dto/update-timbre.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Timbre } from './entities/timbre.entity';
 import { Repository } from 'typeorm';
