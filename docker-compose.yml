@@ -3,9 +3,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: administracion-qr-app
+    container_name: administracion-qr-app-api
     ports:
       - '3000:3000'
     env_file:
       - .env
     restart: unless-stopped
+    networks:
+      - prueba
+
+networks:
+  prueba:
+    name: prueba
