@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TimbresModule } from './timbres/timbres.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { TimbresModule } from './timbres/timbres.module';
       autoLoadEntities: true,
     }),
     TimbresModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

@@ -12,4 +12,7 @@ export class CreateTimbreDto {
 
   @IsString()
   qrCCP: string;
+
+  @IsString()
+  linkCP: string;
 }

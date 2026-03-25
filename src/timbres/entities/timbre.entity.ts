@@ -18,4 +18,7 @@ export class Timbre {
 
   @Column('text')
   qrCCP: string;
+
+  @Column('text')
+  linkCP: string;
 }
