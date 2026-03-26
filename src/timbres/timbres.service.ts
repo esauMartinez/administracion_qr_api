@@ -12,6 +12,11 @@ export class TimbresService {
   ) {}
 
   async create(createTimbreDto: CreateTimbreDto) {
+    await this.timbreRepository.update(
+      { guia: createTimbreDto.guia },
+      { estatus: 'canceled' },
+    );
+
     const timbre = this.timbreRepository.create(createTimbreDto);
 
     await this.timbreRepository.save(timbre);
