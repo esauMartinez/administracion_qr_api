@@ -10,8 +10,8 @@ services:
       - .env
     restart: unless-stopped
     networks:
-      - sistema_relojes_default
+      - apis
 
 networks:
-  sistema_relojes_default:
-    name: sistema_relojes_default
+  apis:
+    name: apis
