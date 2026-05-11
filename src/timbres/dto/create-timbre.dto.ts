@@ -2,17 +2,17 @@ import { IsString } from 'class-validator';
 
 export class CreateTimbreDto {
   @IsString()
-  guia: string;
+  guia!: string;
 
   @IsString()
-  qr: string;
+  qr!: string;
 
   @IsString()
-  estatus: string;
+  estatus!: string;
 
   @IsString()
-  qrCCP: string;
+  qrCCP!: string;
 
   @IsString()
-  linkCP: string;
+  linkCP!: string;
 }
